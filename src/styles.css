@@ -1,0 +1,195 @@
+/* Set the basic styling for the body of the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Center content horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+/* Main container for the Hangman game */
+.hangman-game {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Take up the full viewport height */
+}
+
+/* Layout for the main game section, arranging hangman drawing and word display */
+.hangman-main {
+    display: flex;
+    flex-direction: row; /* Align drawing to the left, word to the right */
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Use full available width */
+    margin-bottom: 20px; /* Add space below the section */
+}
+
+/* Flexbox styling for the hangman drawing section (left side) */
+.hangman-left {
+    flex: 1; /* Take up equal space in the flex container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flexbox styling for the word display section (right side) */
+.hangman-right {
+    flex: 1; /* Take up equal space in the flex container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the main heading */
+h1 {
+    font-size: 36px; /* Large heading font */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333; /* Dark text color */
+    font-weight: bold; /* Bold text */
+    letter-spacing: 2px; /* Spacing between letters */
+    text-transform: uppercase; /* All caps text */
+}
+
+/* Category information text */
+.category-info {
+    margin-top: -10px;
+    font-size: 18px;
+    color: #666; /* Lighter text color */
+}
+
+/* Styling for the word display (spaces and letters) */
+.word-display {
+    font-size: 24px;
+    letter-spacing: 8px; /* Space between letters for visibility */
+    margin-top: 20px; /* Space above the word display */
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #333; /* Dark text color */
+    text-transform: uppercase;
+}
+
+/* Information about guesses */
+.guess-info {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #555; /* Slightly lighter text */
+}
+
+/* Styling for game status text (win/lose) */
+.game-status {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #d9534f; /* Red text color to indicate game status */
+    font-weight: bold;
+}
+
+/* Styling for the on-screen keyboard container */
+.keyboard {
+    margin-top: 20px; /* Space above the keyboard */
+}
+
+/* Styling for individual keyboard buttons */
+.keyboard button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background-color: #b3e5fc; /* Light blue background */
+    border: 2px solid #90caf9;
+    color: #333; /* Dark text color */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Styling for hover effect on keyboard buttons */
+.keyboard button:hover {
+    background-color: #90caf9;
+    transform: translateY(-3px); /* Lift button up when hovered */
+}
+
+/* Styling for disabled buttons (already guessed) */
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed; /* Change cursor to indicate non-clickable */
+}
+
+/* General button styling */
+button {
+    background-color: lightblue;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 10px;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+/* Hover effect for general buttons */
+button:hover {
+    background-color: deepskyblue;
+}
+
+/* Styling for category selection buttons */
+.category-button {
+    padding: 10px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for category buttons */
+.category-button:hover {
+    background-color: deepskyblue;
+}
+
+/* Container for hangman drawing */
+.hangman-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Styling for hangman drawing area */
+.hangman-drawing {
+    position: relative;
+    width: 150px;
+    height: 250px;
+    margin-bottom: 0; /* Ensure no unnecessary space below the drawing */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px; /* Smaller font size for the title */
+    }
+
+    .word-display {
+        font-size: 20px;
+        letter-spacing: 6px; /* Adjusted for better fit on smaller screens */
+    }
+
+    .keyboard button {
+        font-size: 16px; /* Smaller button text for mobile */
+        padding: 8px;
+    }
+
+    .hangman-drawing {
+        width: 120px;
+        height: 160px; /* Smaller drawing for mobile screens */
+    }
+}
