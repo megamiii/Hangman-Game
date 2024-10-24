@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Hangman Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web-based Hangman Game built using **React** and **TypeScript**. The game allows users to select between different categories, such as programming terms and gaming terms, and play the classic Hangman game.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Category Selection**: Players can choose between different word categories to start the game.
+- **Keyboard Interaction**: Players can guess letters by clicking on the on-screen keyboard or using their physical keyboard.
+- **Responsive Design**: The game layout adjusts to various screen sizes for an optimal experience.
+- **Dynamic Hangman Drawing**: As incorrect guesses are made, the hangman drawing progresses, eventually leading to a game over if the maximum number of incorrect guesses is reached.
 
-### `npm start`
+## Categories
+Currently, two categories are available:
+- **Gaming Terms**
+- **Programming Terms**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Game Start - Select Category
+![Select Category](screenshots/1.png)
 
-### `npm test`
+### Playing the Game - Word Guess
+![Word Guess](screenshots/2.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Game Over
+![Game Over](screenshots/3.png)
 
-### `npm run build`
+### Victory Screen
+![Victory](screenshots/4.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/megamii/Hangman-Game.git
+   cd hangman-game
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Run the application:
+    ```bash
+    npm start
+    ```
+4. The game will be running on `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A statically typed superset of JavaScript that compiles to plain JavaScript.
+- **CSS**: For styling the user interface.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Improvements
+- Implement logic to progressively make the game harder as the player successfully guesses words.
+- Add a hint feature that provides the definition of the word to assist the player.
+- Add more categories with different word lists.
+- Implement difficulty levels with fewer or more guesses allowed.
+- Improve animations and transitions for a more engaging user experience.
