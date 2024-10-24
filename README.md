@@ -32,7 +32,7 @@ Currently, two categories are available:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/megamii/Hangman-Game.git
+   git clone https://github.com/megamii/hangman-game.git
    cd hangman-game
     ```
 2. Install dependencies:
